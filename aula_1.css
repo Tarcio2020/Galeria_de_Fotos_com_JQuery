@@ -24,6 +24,7 @@ form {
     background-color: rgb(167, 192, 221);
     padding: 24px 0;
     text-align: center;
+    display: none;
 }
 
 
