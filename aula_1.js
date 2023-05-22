@@ -16,8 +16,18 @@ $(document).ready(function() {/*{
     })
 
     $('form').on('submit', function(e){
-        console.log("submit");
         e.preventDefault();
+        const endercoDeImagem = $('enderecoImagem').val();
+        const novoItem = $('<li></li>');
+        $(`img src"${endercoDeImagem}"/>`).appendTO(novoItem);
+        <img src="./images/foto1.jpg" alt="pintura de um gato"/>
+        $(`
+        <div class="overlay">
+            <a href="./images/foto1.jpg" title="ver imagem em tamanho real" target="_blank">
+                Ver Imagem em Tamanho Real
+            </a>
+        </div>
+        `)
     })
 
 
