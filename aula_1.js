@@ -15,21 +15,20 @@ $(document).ready(function() {/*{
         $('form').slideUp();
     })
 
-    $('form').on('submit', function(e){
+    $('form').on('submit', function(e) {
         e.preventDefault();
-        const endercoDeImagem = $('enderecoImagem').val();
-        const novoItem = $('<li></li>');
-        $(`img src"${endercoDeImagem}"/>`).appendTO(novoItem);
-        <img src="./images/foto1.jpg" alt="pintura de um gato"/>
+        const endercoDeImagem = $('#endereco-Imagem-Nova').val();
+        const novoItem = $('<li style="display: none"></li>');
+        $(`<img src="${endercoDeImagem}" />`).appendTo(novoItem);
         $(`
-        <div class="overlay">
-            <a href="./images/foto1.jpg" title="ver imagem em tamanho real" target="_blank">
-                Ver Imagem em Tamanho Real
-            </a>
-        </div>
-        `)
+            <div class="overlay">
+                <a href="${endercoDeImagem}" target="_blank" title="ver imagem em tamanho real">
+                    Ver Imagem em Tamanho Real
+                </a>
+            </div>
+        `).appendTo(novoItem);
+        $(novoItem).appendTo('ul');
+        $(novoItem).fadeIn(5000);
+        $('#endereco-Imagem-Nova').val('');
     })
-
-
-
 })
